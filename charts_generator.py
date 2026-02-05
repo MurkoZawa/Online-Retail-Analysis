@@ -145,6 +145,10 @@ def generate_entity_charts(df):
     total_product_rows = df.groupby("StockCode").size()
     returned_product_rows = df[df["Return"] == "sì"].groupby("StockCode").size()
     prod_return_percent = (returned_product_rows / total_product_rows * 100).fillna(0)
+    prod_return_percent.sort_values(ascending=False).head(20).plot(
+        kind="bar", ax=axes[2], title="Top Products by Return %"
+    )
+
 
     fig.suptitle("Product Analysis", fontsize=14)
     fig.tight_layout(rect=[0, 0, 1, 0.95])
@@ -156,22 +160,27 @@ def generate_entity_charts(df):
     # =========================
     fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
+    # Filtra i clienti validi (Customer ID diverso da "non indicato")
+    valid_customers_df = sales_df[sales_df["Customer ID"] != "non indicato"]
+
     # 1. Fatturato totale per cliente
-    sales_df.groupby("Customer ID")["TotalPrice"].sum() \
+    valid_customers_df.groupby("Customer ID")["TotalPrice"].sum() \
         .sort_values(ascending=False).head(10).plot(
             kind="bar", ax=axes[0], title="Top Customers by Revenue"
         )
 
     # 2. Transazioni per cliente
-    df.groupby("Customer ID")["Invoice"].nunique() \
+    df[df["Customer ID"] != "non indicato"].groupby("Customer ID")["Invoice"].nunique() \
         .sort_values(ascending=False).head(10).plot(
             kind="bar", ax=axes[1], title="Top Customers by Transactions"
         )
 
-    # 3. Percentuale resi per cliente
-    total_country_rows = df.groupby("Country").size()
-    returned_country_rows = df[df["Return"] == "sì"].groupby("Country").size()
-    country_return_percent = (returned_country_rows / total_country_rows * 100).fillna(0)
+    # 3. Clienti che in media spendono di più per transazione 
+    avg_transaction_value = (
+        valid_customers_df.groupby("Customer ID")["TotalPrice"].sum() /
+        valid_customers_df.groupby("Customer ID")["CustomerTransactions"].first()
+    ).sort_values(ascending=False).head(10)
+    avg_transaction_value.plot(kind="bar", ax=axes[2], title="Top Customers by Avg Transaction Value")
 
     fig.suptitle("Customer Analysis", fontsize=14)
     fig.tight_layout(rect=[0, 0, 1, 0.95])

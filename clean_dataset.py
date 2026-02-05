@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Percorso file di input e output
-input_file = "online_retail_II.xlsx"
+input_file = "online_retail_II_original.xlsx"
 output_file = "online_retail_II_cleaned.xlsx"
 
 # Carica tutti i fogli del file Excel in un dizionario
@@ -27,10 +27,12 @@ for sheet_name, df in sheets.items():
     # Crea la colonna TotalPrice
     df["TotalPrice"] = df["Quantity"] * df["Price"]
 
-    # Assicurati che le colonne chiave siano del tipo corretto
+    # Tipo corretto
     df["StockCode"] = df["StockCode"].astype(str)
     df["Invoice"] = df["Invoice"].astype(str)
-    df["Customer ID"] = df["Customer ID"].astype(str)
+    df["Customer ID"] = pd.to_numeric(df["Customer ID"], errors="coerce") \
+                      .fillna("non indicato") \
+                      .apply(lambda x: str(int(x)) if x != "non indicato" else x)
     df["Country"] = df["Country"].astype(str)
 
     # Colonna ProductInTransactions: numero di Invoice per ogni StockCode
