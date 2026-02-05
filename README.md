@@ -228,7 +228,51 @@ Insight chiave:
 
 Questi pattern suggeriscono criticità di qualità o di aspettative del cliente, rendendo tali prodotti candidati ideali per analisi di root cause o rimozione dal catalogo.
 
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+###### **Decisioni finali**
 
 
 
+**Stagionalità:**
 
+* Rafforzare campagne promozionali e scorte in ottobre-novembre.
+* Monitorare i resi nei periodi di picco.
+
+
+
+**Clienti:**
+
+
+
+Fidelizzare clienti top spender e ad alta frequenza con offerte personalizzate.
+
+* Prodotti:
+* Indagare cause dei resi elevati; valutare rimozione o sostituzione di prodotti critici.
+* Promuovere prodotti top per fatturato e frequenza.
+
+
+
+**Paesi/mercati:**
+
+
+
+* Concentrarsi sui mercati più redditizi (es. UK).
+* Analizzare e ridurre i resi nei mercati problematici (es. USA).
+
+
+
+**Operatività:**
+
+
+
+* Pianificare logistica e personale in base ai picchi di vendite.
+* Usare metriche chiave per decisioni rapide e data-driven.
+
+
+
+**Monitoraggio continuo:**
+
+
+
+* Aggiornare dashboard e dataset per seguire trend e adattarsi ai cambiamenti
