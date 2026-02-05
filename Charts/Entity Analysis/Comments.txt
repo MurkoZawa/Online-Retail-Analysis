@@ -1,9 +1,0 @@
-country_analysis.jpg mostra la top 10 dei paesi con maggior profitto, maggior numero di transazioni e maggior percentuale di resi.
-Come profitto e transazioni, il Regno Unito sta in prima posizione, con ben 17.000.000 di fatturato e oltre 40.000 transazioni, tra l'altro è anche il paese più frequente nel dataset. Per quanto riguarda i resi, gli USA stanno in prima posizione, seguiti da Giappone, Repubblica Ceca, Korea e Arabia Saudita.
-
-customer_analysis.jpg mostra la top 10 dei clienti che hanno portato profitto, che hanno effettuato più transazioni e quanto in media hanno speso ogni volta che hanno effettuato una transazione.
-I clienti validi, per cui l'analisi è stata fatta, sono stati quelli il cui ID era indicato.
-18102 è arrivato a portare un profitto di 600.000, 14911 ha eseguito oltre 500 transazioni, e 16446 ha raggiunto un valore medio di oltre 50.000.
-
-product_analysis.jpg mostra la top 10 dei prodotti che hanno portato maggior profitto totale e quelli maggiormente presenti nelle transazioni; inoltre mostra la top 20 delle percentuali dei prodotti resi.
-I prodotti 22423 e M hanno portato quasi a 350.000 di profitto, mentre il prodotto 85123A è stato presente in oltre 5000 transazioni. Molti prodotti, come CRUK, 21254, 21315 ecc. sono sempre stati resi, e prodotti come D, S e AMAZONFEE sono quasi sempre stati resi. Molto probabilmente, questi prodotti erano difettosi e non hanno soddisfatto nessun cliente.
