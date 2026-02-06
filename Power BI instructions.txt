@@ -1,0 +1,8 @@
+1) Caricare file .xlsx
+2) Trasforma eventualmente dati e risolvi errori
+3) Se hai più tabelle con le medesime colonne, fai accoda; se vuoi fare join, fai merge.
+4) In Visualizzazione Tabella, tasto destro sul nome della tabella a destra, Nuova Misura o Nuova Colonna, per aggiungere misure e colonne; e programma in DAX.
+5) In Visualizzazione Report, puoi trascinare le colonne e le misure per creare grafici, nei filtri puoi decidere asse X e Y, e filtrare i campi desiderati (Filtro avanzato per trovare subito il campo da escludere). In Visualizzazioni, icona centrale (formatta oggetto visivo) puoi decidere unità di misura e caratteristiche delle etichette.
+6) Nuovo oggetto visivo per inserire un grafico. Popola asse X e Y e formatta.
+7) Aggiungi come oggetto visivo dei filtri dei dati, trascinandoci le colonne e misure usate nei grafici, per far comparire nei grafici solo i valori desiderati.
+8) Se consideri le date, nella sezione delle etichette dell'asse, puoi scegliere se mostrare giorno, trimestre, anno...
