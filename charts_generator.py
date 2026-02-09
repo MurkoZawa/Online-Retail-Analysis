@@ -87,10 +87,9 @@ def generate_temporal_charts(df, sales_df):
     plt.close()
     
     # 4. Valore medio transazione per anno-mese
-    monthly_sales = sales_df.groupby("YearMonth")["TotalPrice"].sum() 
-    monthly_sales_transactions = sales_df.groupby("YearMonth")["Invoice"].nunique() 
-    avg_transaction_value = (monthly_sales / monthly_sales_transactions).sort_index() 
-    plt.figure() 
+    avg_transaction_value = df.groupby('YearMonth').apply(
+        lambda x: x['TotalPrice'].sum() / x['Invoice'].nunique()
+        ).reset_index(name='Fatturato_Medio_per_Transazione')
     avg_transaction_value.plot() 
     plt.xlabel("Year-Month") 
     plt.ylabel("Average Transaction Value") 

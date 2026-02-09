@@ -5,4 +5,7 @@
 5) In Visualizzazione Report, puoi trascinare le colonne e le misure per creare grafici, nei filtri puoi decidere asse X e Y, e filtrare i campi desiderati (Filtro avanzato per trovare subito il campo da escludere). In Visualizzazioni, icona centrale (formatta oggetto visivo) puoi decidere unità di misura e caratteristiche delle etichette.
 6) Nuovo oggetto visivo per inserire un grafico. Popola asse X e Y e formatta.
 7) Aggiungi come oggetto visivo dei filtri dei dati, trascinandoci le colonne e misure usate nei grafici, per far comparire nei grafici solo i valori desiderati.
-8) Se consideri le date, nella sezione delle etichette dell'asse, puoi scegliere se mostrare giorno, trimestre, anno...
+8) Se consideri le date, nella sezione delle etichette dell'asse, puoi scegliere se mostrare giorno, trimestre, anno…
+9) Cliccando su Altre analisi (lente di ingrandimento), puoi fare previsioni future e vedere anomalie. Aumenta la stagionalità per misure più precise.
+10) In Formatta oggetto visivo, Linee della griglia, Orizzontale, puoi tracciare linee per vedere meglio i valori.
+11) Cliccando su una colonna che ha una gerarchia, si può rimuovere per mettere tutto insieme

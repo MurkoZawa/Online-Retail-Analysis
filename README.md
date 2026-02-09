@@ -82,7 +82,7 @@ Si osserva:
 
 •	una fase di contrazione fino ad aprile 2011,
 
-•	una nuova ripresa che porta al secondo valore più alto a dicembre 2011.
+•	una nuova ripresa fino a settembre 2011, per poi stabilizzarsi.
 
 Questo andamento suggerisce variazioni significative nel valore medio del carrello, potenzialmente legate a politiche promozionali o cambiamenti nel mix di prodotti.
 
