@@ -116,7 +116,7 @@ Il numero di invoice uniche evidenzia:
 
 •	una dinamica simile al fatturato,
 
-•	un primo picco a ottobre 2010 (>3000 transazioni),
+•	un primo picco a ottobre 2010 (>3.000 transazioni),
 
 •	una fase di contrazione all’inizio del 2011,
 
@@ -198,7 +198,7 @@ Alcuni casi rilevanti:
 
 •	14911 è il cliente più frequente, con oltre 500 transazioni,
 
-•	16446 presenta una spesa media per transazione superiore a 50.000.
+•	16446 presenta una spesa media per transazione pari quasi a 12.000.
 
 Questi profili evidenziano differenti tipologie di clienti: ad alto valore, ad alta frequenza e ad alto ticket medio.
 
@@ -218,9 +218,9 @@ Il grafico mostra:
 
 Insight chiave:
 
-•	i prodotti 22423 e M generano quasi 350.000 di fatturato,
+•	i prodotti 1340 e M generano quasi 350.000 di fatturato,
 
-•	il prodotto 85123A è presente in oltre 5000 transazioni,
+•	il prodotto 85123A è presente in oltre 5.000 transazioni,
 
 •	diversi prodotti (es. CRUK, 21254, 21315) risultano sempre restituiti,
 

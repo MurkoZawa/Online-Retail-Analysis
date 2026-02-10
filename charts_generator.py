@@ -175,11 +175,14 @@ def generate_entity_charts(df):
         )
 
     # 3. Clienti che in media spendono di più per transazione 
-    avg_transaction_value = (
-        valid_customers_df.groupby("Customer ID")["TotalPrice"].sum() /
-        valid_customers_df.groupby("Customer ID")["CustomerTransactions"].first()
-    ).sort_values(ascending=False).head(10)
-    avg_transaction_value.plot(kind="bar", ax=axes[2], title="Top Customers by Avg Transaction Value")
+    top_customers = (
+        df.groupby("Customer ID")
+          .apply(lambda x: x["TotalPrice"].sum() / x["Invoice"].nunique())
+          .reset_index(name="Avg Client Transaction Value")
+          .sort_values("Avg Client Transaction Value", ascending=False)
+          .head(10)
+    )
+    top_customers.plot(kind="bar", ax=axes[2], title="Top Customers by Avg Transaction Value")
 
     fig.suptitle("Customer Analysis", fontsize=14)
     fig.tight_layout(rect=[0, 0, 1, 0.95])
