@@ -1,0 +1,7 @@
+INSERT INTO onlineretail.retail
+(invoice, stockcode, description, quantity, invoicedate, price, customerid, country, return)
+VALUES
+('536365', '85123B', 'TEST-WHITE HANGING HEART T-LIGHT HOLDER', 6, '2010-12-23', 2.55, 'X17850', 'Italy', 'no'),
+('536366', '71053A', 'TEST-WHITE METAL LANTERN', 12, '2010-11-03', 3.39, 'X17850', 'Italy', 'no'),
+('536367', '84406C', 'TEST-CREAM CUPID HEARTS COAT HANGER', 8, '2010-10-04', 2.75, 'X13047', 'Italy', 'no'),
+('C536368', '84029H', 'TEST-KNITTED UNION FLAG HOT WATER BOTTLE', -6, '2010-12-30', 3.39, 'X13047', 'Italy', 'sì');

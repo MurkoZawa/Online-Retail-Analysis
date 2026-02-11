@@ -46,6 +46,14 @@ o	analisi temporali, focalizzate sull’evoluzione delle metriche nel tempo;
 
 o	analisi per entità, che mettono a confronto performance e comportamenti di paesi, clienti e prodotti.
 
+4\.	Riproduzione insight in Power BI
+
+o	Il file *Analysis.pbix* contiene tutti i grafici sopraelencati, generati dinamicamente, dopo aver prelevato i dati direttamente da Postgres.
+
+5\.	Analisi delle metriche avanzate
+
+Lo script *metrics\_analyzer.py* produce una serie di grafici che riportano previsioni e clustering.
+
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 ###### **Analisi temporale**
@@ -229,6 +237,42 @@ Insight chiave:
 Questi pattern suggeriscono criticità di qualità o di aspettative del cliente, rendendo tali prodotti candidati ideali per analisi di root cause o rimozione dal catalogo.
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+
+**Analisi metriche avanzate**
+
+**forecast\_arima.png**
+
+Il grafico mostra l’andamento storico delle vendite giornaliere aggregate per giorno. Si osservano variazioni significative tra periodi di elevato fatturato e periodi con vendite nulle o negative, dovute principalmente ai resi. Il picco di vendite si registra tra settembre e ottobre 2010, con valori prossimi a 120.000 unità. La linea rossa rappresenta la previsione ARIMA per i successivi 30 giorni: il modello prevede un calo iniziale a circa 70.000 unità, stabilizzandosi successivamente intorno a 50.000 unità giornaliere.
+
+
+
+**forecast\_prophet.png**
+
+Il grafico illustra l’andamento storico delle vendite insieme alla previsione generata dal modello Prophet. I punti neri rappresentano le vendite giornaliere effettive, mentre la linea blu mostra la previsione del modello. La banda azzurra indica l’intervallo di confidenza, evidenziando l’incertezza della stima. Si osserva una modalità attorno alle 20.000 unità fino ad agosto 2010, con un incremento fino a circa 40.000 unità, e un picco massimo tra settembre e ottobre 2010 vicino a 120.000 unità. Questo grafico permette di identificare trend, stagionalità e picchi di vendita, utili per pianificazione e forecasting operativo.
+
+
+
+**monthly\_sales.png**
+
+Il grafico rappresenta le vendite mensili aggregate, con la linea smussata che indica la media mobile a 3 mesi. Questa media consente di osservare il trend generale eliminando le fluttuazioni mensili e il rumore della serie. L’andamento mostra un incremento progressivo fino al picco di novembre 2010, evidenziando la stagionalità delle vendite e il consolidamento del trend annuale. Per calcolare il tutto, si considerano solo mese e anno di ogni acquisto, così da poter guardare mese per mese. Si sommano tutti i soldi spesi ogni mese. Si guarda se in una certa data si venda più o meno dello stesso mese dell’anno precedente (YoY Growth) o del mese precedente (MoM Growth). Infine, si fa una media dei 3 mesi vicini (Rolling Avg) per osservare il trend.
+
+
+
+**rfm\_clusters.png**
+
+Il grafico rappresenta la segmentazione dei clienti in 4 cluster tramite KMeans, basata sulle metriche RFM.
+
+* Asse X (Recency): numero di giorni trascorsi dall’ultima transazione di ciascun cliente.
+* Asse Y (Monetary): spesa totale del cliente.
+* Viene calcolata anche la Frequency per capire quante volte ciascun cliente ha eseguito una transazione.
+
+Ogni cluster rappresenta un segmento di clienti con comportamenti simili, a seconda di quanto spendono, quanto comprano spesso e quando hanno comprato. La maggior parte dei clienti rientra in un range di spesa inferiore a 100.000 unità, mentre il cluster 0 include clienti con spese fino a quasi 400.000 unità. Nel cluster 1 è presente un cliente eccezionale con oltre 1.400.000 unità di spesa totale. Questo grafico consente di identificare clienti ad alto valore e opportunità per strategie di marketing mirate.
+
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
 
 ###### **Decisioni finali**
 

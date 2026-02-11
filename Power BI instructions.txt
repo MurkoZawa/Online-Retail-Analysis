@@ -11,8 +11,11 @@
 11) Cliccando su una colonna che ha una gerarchia, si può rimuovere per mettere tutto insieme
 12) In Visualizzazione Tabella, tasto destro su una colonna, Copia, Tabella, per copiarla interamente.
 13) Ordina Anno e Mese direttamente sui tre puntini del grafico.
+14) Usare Drill-through per aggiungere una "clausola" ai grafici, ad esempio, se metto Return come drill-through, mostra il grafico dove Return è uguale a un certo valore.
 
 ** SQL **
-13) In PgAdmin, creare la tabella, tasto destro, import/export, selezionare import, percorso del CSV (da salvare in CSV con codifica UTF-8), selezionare codifica UTF-8, Header Yes, delimitatore ";". 
-14) In Home, Recupera dati, puoi connetterti al database cercando ad esempio Database Postgres, connettersi in Server localhost, Database nome_database, fare Import per caricare tutta la tabella dal database a BI, altrimenti fare DirectQuery per invocare in tempo reale il database, e inserire in opzioni avanzate la query SELECT in schema.tabella per i nuovi dati.
-15) Per avere una suddivisione Anno/Mese, aggiungere una colonna al database che abbia solo quei due valori più giorno settato a 01 per corrispondere correttamente al formato Date.
+1) In PgAdmin, creare la tabella, tasto destro, import/export, selezionare import, percorso del CSV (da salvare in CSV con codifica UTF-8), selezionare codifica UTF-8, Header Yes, delimitatore ";".  Se ci son problemi, usare la funzione COPY.
+2) In Home, Recupera dati, puoi connetterti al database cercando ad esempio Database Postgres, connettersi in Server localhost, Database nome_database, fare Import per caricare tutta la tabella dal database a BI, altrimenti fare DirectQuery per invocare in tempo reale il database, e inserire in opzioni avanzate la query SELECT in schema.tabella per i nuovi dati.
+3) Per avere una suddivisione Anno/Mese, aggiungere una colonna al database che abbia solo quei due valori più giorno settato a 01 per corrispondere correttamente al formato Date.
+4) Esistono le function SQL che permettono di settare in automatico il valore di una colonna ogni volta che viene fatta un insert (Trigger).
+5) Quando hai finito, su Power BI fai Aggiorna, per caricare i nuovi dati.
