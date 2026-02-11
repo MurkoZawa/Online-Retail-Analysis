@@ -17,7 +17,7 @@ os.makedirs(output_dir, exist_ok=True)
 # -----------------------------
 # Caricamento dataset
 # -----------------------------
-file_path = "online_retail_II_cleaned.xlsx"
+file_path = "Dataset/online_retail_II_cleaned.xlsx"
 df = pd.read_excel(file_path, parse_dates=['InvoiceDate'])
 
 # -----------------------------

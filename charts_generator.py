@@ -25,7 +25,7 @@ except ValueError:
 print(f"Hai scelto: {options[choice]}")
 
 # --- FILE IN INPUT ---
-input_file = "online_retail_II_cleaned.xlsx"
+input_file = "Dataset/online_retail_II_cleaned.xlsx"
 
 # --- LETTURA DATI ---
 sheets = pd.read_excel(input_file, sheet_name=None)

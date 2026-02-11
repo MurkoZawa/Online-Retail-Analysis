@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Percorso file di input e output
-input_file = "online_retail_II_original.xlsx"
-output_file = "online_retail_II_cleaned.xlsx"
+input_file = "Dataset/online_retail_II_original.xlsx"
+output_file = "Dataset/online_retail_II_cleaned.xlsx"
 
 # Carica tutti i fogli del file Excel in un dizionario
 sheets = pd.read_excel(input_file, sheet_name=None)
